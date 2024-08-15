@@ -50,10 +50,10 @@ function App() {
   return (
     <>
       <div>
-        <h1 className="font-bold text-3xl text-white text-center p-5  backdrop-blur-xl">
+        <h1 className="p-5 text-3xl font-bold text-center text-white backdrop-blur-xl">
           Tea Display
         </h1>
-        <div className="p-5 flex flex-wrap justify-evenly">
+        <div className="flex flex-wrap p-5 justify-evenly">
           <HardCodeComponent />
           {allTeaList.map((data, index) => {
             const name = data[Object.keys(data)[0]];
@@ -64,10 +64,10 @@ function App() {
             const temperature = data[Object.keys(data)[5]];
             const caffine = data[Object.keys(data)[6]];
             const image = data[Object.keys(data)[7]];
-            console.log(index);
+
             return (
               <TeaCard
-                key={index}
+                cardKey={index}
                 teaName={name}
                 teaType={type}
                 teaCaffineLevel={caffine}
